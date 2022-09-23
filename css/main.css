@@ -1,0 +1,66 @@
+
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 5vh 2fr 3fr 2fr 3fr;
+    grid-template-areas: 
+        "navbar navbar navbar navbar navbar"
+        "hero-image hero-image hero-image hero-image hero-image"
+        ". . . . ."
+        ". prof-pic prof-info prof-info ."
+        ". shows shows shows . ";
+}
+.navbar{
+    grid-area: navbar;
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+.navbar{
+    color: white;
+    text-decoration: none;
+}
+.image-area{
+    grid-area: hero-image;
+}
+.hero-image{
+    background-image:url("../images/theater-image-background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-text{
+    color: white;
+}
+.showings{
+    grid-area: shows;
+}
+
+.shows{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    padding: 1vh;
+    width: 100%;
+    margin: 1vh;
+}
+.show-info li{
+    list-style-type: none;
+    height: 100%;
+    line-height: 3;
+}
+
+.read-more{
+    color: white;
+    background-color: darkgoldenrod;
+    width: 90px;
+    height: 50px;
+}
